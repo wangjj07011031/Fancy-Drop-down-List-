@@ -1,0 +1,45 @@
+ [
+   {
+     "name": "appearForm",
+-    "description": "选择画面弹出的方式",
+-    "displayname": "弹出方式设定",
+     "type": "number",
+     "range":"[1,6]",
+     "default":"1"
+   }
+   {
+     "name": "appearColor",
+     "description": "选择焦点和默认值的主题颜色",
+-    "displayname": "主题颜色",
+     "type": "string",
+     "default":"#97d1bc"
+   }
+   {
+     "name": "appearContent",
+     "description": "填充想要显示的内容",
+-    "displayname": "显示内容",
+     "type": "string",
+     "default":""
+   }
+   {
+     "name": "appearLog",
+     "description": "加载与文本对应的LOG图片",
+-    "displayname": "显示LOG",
+     "type": "file",
+     "default":""
+   }
+   {
+     "name": "appearAngle1",
+     "description": "对某些画面弹出的方式设定gutter之间的夹角范围",
+-    "displayname": "偏转角",
+     "type": "number",
+     "default":"5"
+   }
+    {
+     "name": "appearAngle2",
+     "description": "对某些画面弹出的方式设定gutter之间的随机夹角范围",
+-    "displayname": "随机偏转角",
+     "type": "number",
+     "range":"[-3,3]",
+   }
+ ]
