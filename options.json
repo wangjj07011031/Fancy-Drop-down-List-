@@ -1,45 +1,90 @@
  [
    {
      "name": "appearForm",
--    "description": "选择画面弹出的方式",
--    "displayname": "弹出方式设定",
+     "description": "可选择的画面弹出方式",
+     "displayname": "弹出方式设定",
      "type": "number",
-     "range":"[1,6]",
-     "default":"1"
-   }
+     "options": [
+                    {
+                        "text": "纵向展开",
+                        "value": "1"
+                    },
+                    {
+                        "text": "随机角度展开",
+                        "value": "2"
+                    },
+                    {
+                        "text": "扇型展开",
+                        "value": "3"
+                    },
+                    {
+                        "text": "层叠进入式",
+                        "value": "4"
+                    },
+                    {
+                        "text": "同时横向滑入",
+                        "value": "5"
+                    },
+                    {
+                        "text": "顺次横向滑入",
+                        "value": "6"
+                    }
+                ],
+      "default":"1"          
+   },
+
    {
      "name": "appearColor",
-     "description": "选择焦点和默认值的主题颜色",
--    "displayname": "主题颜色",
-     "type": "string",
+     "description": "选择焦点和默认值的颜色",
+     "displayname": "主题颜色",
+     "type": "color",
      "default":"#97d1bc"
-   }
+   },
+
    {
      "name": "appearContent",
      "description": "填充想要显示的内容",
--    "displayname": "显示内容",
-     "type": "string",
-     "default":""
-   }
+     "displayname": "显示内容",
+     "type": "array",
+     "item":[
+              {
+               "name": "appearText",
+               "description": "加载文本内容",
+               "displayname": "文字内容",
+               "type": "string",
+               "required": true
+              },
+              {
+               "name": "appearLog",
+               "description": "加载与文本对应的LOG图片",
+               "displayname": "LOG图片",
+               "type": "file",
+               "required": true
+              }
+            ],
+     "required": true
+   },
+  
    {
-     "name": "appearLog",
-     "description": "加载与文本对应的LOG图片",
--    "displayname": "显示LOG",
-     "type": "file",
-     "default":""
-   }
-   {
-     "name": "appearAngle1",
+     "name": "appearAngle",
      "description": "对某些画面弹出的方式设定gutter之间的夹角范围",
--    "displayname": "偏转角",
+     "displayname": "偏转角",
      "type": "number",
-     "default":"5"
+     "options": [
+                 {
+                   "text": "夹角度1deg",
+                   "value": "1"
+                 },
+                 {
+                   "text": "夹角度3deg",
+                   "value": "3"
+                 },
+                 {
+                   "text": "夹角度5deg,不适用gutter较多情况",
+                   "value": "5"
+                 }
+       ],
+     "required": true
    }
-    {
-     "name": "appearAngle2",
-     "description": "对某些画面弹出的方式设定gutter之间的随机夹角范围",
--    "displayname": "随机偏转角",
-     "type": "number",
-     "range":"[-3,3]",
-   }
+
  ]
