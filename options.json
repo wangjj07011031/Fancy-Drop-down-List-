@@ -1,8 +1,8 @@
  [
    {
-     "name": "appearForm",
+     "name": "animation",
      "description": "可选择的画面弹出方式",
-     "displayname": "弹出方式设定",
+     "displayname": "动画选择",
      "type": "number",
      "options": [
                     {
@@ -34,7 +34,7 @@
    },
 
    {
-     "name": "appearColor",
+     "name": "color",
      "description": "选择焦点和默认值的颜色",
      "displayname": "主题颜色",
      "type": "color",
@@ -42,48 +42,34 @@
    },
 
    {
-     "name": "appearContent",
+     "name": "title",
+     "description": "填充默认的标题内容",
+     "displayname": "标题显示",
+     "type": "string",
+     "required": true
+   },
+   
+   {
+     "name": "content",
      "description": "填充想要显示的内容",
-     "displayname": "显示内容",
+     "displayname": "内容显示",
      "type": "array",
      "item":[
               {
-               "name": "appearText",
+               "name": "text",
                "description": "加载文本内容",
                "displayname": "文字内容",
                "type": "string",
                "required": true
               },
               {
-               "name": "appearLog",
-               "description": "加载与文本对应的LOG图片",
-               "displayname": "LOG图片",
+               "name": "icon",
+               "description": "加载与文本对应的图片",
+               "displayname": "图片显示",
                "type": "file",
                "required": true
               }
             ],
-     "required": true
-   },
-  
-   {
-     "name": "appearAngle",
-     "description": "对某些画面弹出的方式设定gutter之间的夹角范围",
-     "displayname": "偏转角",
-     "type": "number",
-     "options": [
-                 {
-                   "text": "夹角度1deg",
-                   "value": "1"
-                 },
-                 {
-                   "text": "夹角度3deg",
-                   "value": "3"
-                 },
-                 {
-                   "text": "夹角度5deg,不适用gutter较多情况",
-                   "value": "5"
-                 }
-       ],
      "required": true
    }
 
